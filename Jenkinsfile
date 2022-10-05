@@ -13,10 +13,7 @@ pipeline {
       parallel {
         stage('whoami') {
           steps {
-            dockerNode(image: 'ubuntu') {
-              sh 'hostname && cat /etc/passwd /etc/*release'
-            }
-
+            sh 'hostname && cat /etc/passwd /etc/*release'
           }
         }
 
