@@ -13,7 +13,7 @@ pipeline {
       parallel {
         stage('whoami') {
           steps {
-            sh 'cat /etc/passwd'
+            sh 'hostname && cat /etc/passwd /etc/*release'
           }
         }
 
@@ -25,7 +25,7 @@ pipeline {
 
         stage('Print Stage Environment') {
           steps {
-            sh 'echo $envTest'
+            sh 'hostname && echo $envTest'
           }
         }
 
