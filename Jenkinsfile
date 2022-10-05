@@ -32,5 +32,11 @@ pipeline {
       }
     }
 
+    stage('Notify Stage') {
+      steps {
+        telegramSend(message: 'halooooo', chatId: -1001382005280)
+      }
+    }
+
   }
 }
