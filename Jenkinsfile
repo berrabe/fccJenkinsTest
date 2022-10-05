@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'nginx:latest'
+    }
+
+  }
   stages {
     stage('Test Stage') {
       environment {
