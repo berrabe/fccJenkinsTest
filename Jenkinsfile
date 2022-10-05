@@ -13,7 +13,7 @@ pipeline {
       parallel {
         stage('whoami') {
           steps {
-            sh 'whoami'
+            sh 'cat /etc/passwd'
           }
         }
 
